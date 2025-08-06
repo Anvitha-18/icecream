@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="icon" href="images/icecream.webp" type="image/webp">
+    <style>
+        .maindiv{
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .pic{
+            border:4px dashed white;
+            padding:50px 20px 50px 20px;
+            /* background-color: whitesmoke;
+            opacity:0px; */
+            margin:50px;
+        }
+        .info{
+            border:4px dashed white;
+            margin:50px;
+            height:fit-content;
+            width:fit-content;
+            padding:50px 10px 50px 10px;
+             display:flex;
+            flex-direction:column; 
+            gap:75px;
+        }  
+    </style>
+    <title>Order</title>
+</head>
+<body>
+    <script>
+        function selectlog(){
+            var usernamenode=document.getElementById("username");
+            var phonenode=document.getElementById("phone");
+
+            console.log(usernamenode.value);
+            console.log(`Phone ${phonenode.value}`);
+        }
+    </script>
+    <h1 style="font-size: 15px;font-family: cursive;color: rgb(255, 255, 255);font-size: 80px;text-align: center;-webkit-text-stroke:2px black;">Place your Order</h1>
+    <form>
+    <div class="maindiv">
+        <div class="pic">
+        <img src="/pabbas/images/ic1.jpg" height="300px" width="350px"></div>
+        <div class="info">
+           <div><input type="text" placeholder="enter your name" id="username"></div> 
+            <div><input type="tel" placeholder="enter your phone number" pattern="[1-9]{1}[0-9]{9}" maxlength="10" id="phone"></div> 
+            <div><label>Pick your order</label>
+            <select name="ic_option" multiple size="4">
+                <option value="gudbud">Gudbud</option>
+                <option value="chocolate dad">chocolate dad</option>
+                <option value="vanilla scoop">vanilla scoop</option>
+            </select></div>    
+            </form>       
+            <div><button type="button" onclick="selectlog()">Order</button></div>
+        </div>        
+        </div>
+    </body>
+</body>
+</html>
